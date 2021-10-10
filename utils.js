@@ -1,6 +1,5 @@
 const handleResponse = (res) => (statusCode, payload) => {
   statusCode = typeof statusCode === "number" ? statusCode : 200;
-  console.log(payload);
   payload = typeof payload === "object" ? payload : {};
   const payloadString = JSON.stringify(payload);
   res.setHeader("Content-Type", "application/json");
